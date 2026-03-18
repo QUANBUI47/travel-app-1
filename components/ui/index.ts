@@ -1,5 +1,5 @@
 /**
- * UI components — ViVu app
+ * UI components — Vivu app
  * Tương đương HeroUI trên web. Dùng design tokens (doc/DESIGN_SYSTEM.md).
  */
 

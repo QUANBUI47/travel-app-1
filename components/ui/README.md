@@ -1,29 +1,29 @@
-# ViVu App — UI Components
+# Vivu App — UI Components
 
 Bộ component dùng chung cho app, **tương đương HeroUI** trên web. Cùng design system (doc/DESIGN_SYSTEM.md).
 
 ## Danh sách component
 
-| Component | Mô tả |
-|-----------|--------|
-| **Button** | Nút: variant (solid, flat, bordered, ghost), color (primary, secondary, default, destructive), size |
-| **Card** | Thẻ: Card, CardHeader, CardBody |
-| **Input** | Ô nhập: label, startContent, endContent, error |
-| **Link** | Link điều hướng (Expo Router): href, color, size |
-| **Spacer** | Khoảng cách: size (token hoặc số), horizontal |
-| **Badge** | Nhãn nhỏ: color, variant (solid/flat), size |
-| **Chip** | Tag có thể chọn/bỏ: selected, onPress, onClose, leftIcon, rightIcon |
-| **Avatar** | Ảnh đại diện: source, name (fallback chữ cái), size (sm/md/lg) |
-| **Divider** | Đường kẻ: orientation (horizontal/vertical), spacing |
-| **Skeleton** | Placeholder loading: width, height, borderRadius |
-| **ListItem** | Hàng trong list: leftContent, rightContent, onPress, showDivider |
-| **Tabs** | Tab bar: items, selectedKey, onSelectionChange, fullWidth |
-| **ImageCard** | Card ảnh trên + nội dung dưới (khách sạn, điểm đến): source, aspectRatio, onPress |
-| **Container** | Layout: padding, safeTop, safeBottom |
-| **Switch** | Công tắc bật/tắt |
-| **Spinner** | Loading spinner: size (sm/md/lg) |
-| **SearchBar** | Ô tìm kiếm: searchIcon, placeholder, ...Input props |
-| **Select** | Chọn 1 option: label, options, value, onValueChange |
+| Component     | Mô tả                                                                                               |
+| ------------- | --------------------------------------------------------------------------------------------------- |
+| **Button**    | Nút: variant (solid, flat, bordered, ghost), color (primary, secondary, default, destructive), size |
+| **Card**      | Thẻ: Card, CardHeader, CardBody                                                                     |
+| **Input**     | Ô nhập: label, startContent, endContent, error                                                      |
+| **Link**      | Link điều hướng (Expo Router): href, color, size                                                    |
+| **Spacer**    | Khoảng cách: size (token hoặc số), horizontal                                                       |
+| **Badge**     | Nhãn nhỏ: color, variant (solid/flat), size                                                         |
+| **Chip**      | Tag có thể chọn/bỏ: selected, onPress, onClose, leftIcon, rightIcon                                 |
+| **Avatar**    | Ảnh đại diện: source, name (fallback chữ cái), size (sm/md/lg)                                      |
+| **Divider**   | Đường kẻ: orientation (horizontal/vertical), spacing                                                |
+| **Skeleton**  | Placeholder loading: width, height, borderRadius                                                    |
+| **ListItem**  | Hàng trong list: leftContent, rightContent, onPress, showDivider                                    |
+| **Tabs**      | Tab bar: items, selectedKey, onSelectionChange, fullWidth                                           |
+| **ImageCard** | Card ảnh trên + nội dung dưới (khách sạn, điểm đến): source, aspectRatio, onPress                   |
+| **Container** | Layout: padding, safeTop, safeBottom                                                                |
+| **Switch**    | Công tắc bật/tắt                                                                                    |
+| **Spinner**   | Loading spinner: size (sm/md/lg)                                                                    |
+| **SearchBar** | Ô tìm kiếm: searchIcon, placeholder, ...Input props                                                 |
+| **Select**    | Chọn 1 option: label, options, value, onValueChange                                                 |
 
 ## Cách dùng
 

@@ -1,5 +1,5 @@
 /**
- * Design system — ViVu (doc/DESIGN_SYSTEM.md, doc/design-tokens.json)
+ * Design system — Vivu (doc/DESIGN_SYSTEM.md, doc/design-tokens.json)
  * Palette hiện đại: cyan (primary), slate neutrals.
  * Font: Be Vietnam Pro. Icons: Lucide.
  */
