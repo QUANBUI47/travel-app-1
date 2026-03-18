@@ -1,21 +1,44 @@
 import React from "react";
 import { SvgXml } from "react-native-svg";
 
-const logoXml = `
-<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="50" cy="50" r="48" stroke="#0068c3" stroke-width="3"/>
-  <path d="M25 62 L50 25 L75 62" stroke="#0068c3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M35 55 L50 32 L65 55" stroke="#0068c3" stroke-width="1.5" opacity="0.6"/>
-  <circle cx="50" cy="68" r="14" fill="#fcc219"/>
-  <path d="M28 75 Q40 68 50 75 T72 75" stroke="#0068c3" stroke-width="3" stroke-linecap="round"/>
-  <path d="M32 82 Q42 77 50 82 T68 82" stroke="#0068c3" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+interface BrandLogoProps {
+  size?: number;
+  variant?: "light" | "dark";
+}
+
+const darkXml = `
+<svg width="300" height="110" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(5, 5)">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#82bff0" stroke-width="3"></circle>
+        <circle cx="50" cy="65" r="15" fill="#fcc219"></circle>
+        <path d="M15 60 L50 20 L85 60" fill="none" stroke="#82bff0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M50 20 L30 60 M50 20 L40 60 M50 20 L60 60 M50 20 L70 60" stroke="#82bff0" stroke-width="1" opacity="0.4"></path>
+        <path d="M15 60 Q50 68 85 60" fill="none" stroke="#82bff0" stroke-width="3"></path>
+        <path d="M20 78 Q35 72 50 78 Q65 84 80 78" fill="none" stroke="#82bff0" stroke-width="2"></path>
+        <path d="M20 88 Q35 82 50 88 Q65 94 80 88" fill="none" stroke="#82bff0" stroke-width="2"></path>
+    </g>
+    <text x="115" y="80" font-family="sans-serif" font-weight="700" font-size="72" fill="#F0F6FC" style="letter-spacing: -2px;">Vivu</text>
 </svg>
 `;
 
-interface BrandLogoProps {
-  size?: number;
-}
+const lightXml = `
+<svg width="300" height="110" viewBox="0 0 300 110" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(5, 5)">
+        <circle cx="50" cy="50" r="48" fill="none" stroke="#0068c3" stroke-width="3"></circle>
+        <circle cx="50" cy="65" r="15" fill="#fcc219"></circle>
+        <path d="M15 60 L50 20 L85 60" fill="none" stroke="#0068c3" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+        <path d="M50 20 L30 60 M50 20 L40 60 M50 20 L60 60 M50 20 L70 60" stroke="#0068c3" stroke-width="1" opacity="0.4"></path>
+        <path d="M15 60 Q50 68 85 60" fill="none" stroke="#0068c3" stroke-width="3"></path>
+        <path d="M20 78 Q35 72 50 78 Q65 84 80 78" fill="none" stroke="#0068c3" stroke-width="2"></path>
+        <path d="M20 88 Q35 82 50 88 Q65 94 80 88" fill="none" stroke="#0068c3" stroke-width="2"></path>
+    </g>
+    <text x="115" y="80" font-family="sans-serif" font-weight="700" font-size="72" fill="#1A1A1A" style="letter-spacing: -2px;">Vivu</text>
+</svg>
+`;
 
-export function BrandLogo({ size = 40 }: BrandLogoProps) {
-  return <SvgXml xml={logoXml} width={size} height={size} />;
+export function BrandLogo({ size = 120, variant = "dark" }: BrandLogoProps) {
+  const xml = variant === "dark" ? darkXml : lightXml;
+  // Calculate height based on 300/110 ratio
+  const height = (size * 110) / 300;
+  return <SvgXml xml={xml} width={size} height={height} />;
 }

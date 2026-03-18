@@ -1,38 +1,38 @@
 /**
  * Design system — Vivu (doc/DESIGN_SYSTEM.md, doc/design-tokens.json)
- * Palette hiện đại: cyan (primary), slate neutrals.
- * Font: Be Vietnam Pro. Icons: Lucide.
+ * Palette hiện đại: blue (primary), slate neutrals.
+ * Font: Inter & Plus Jakarta Sans. Icons: Lucide.
  */
 
 import { Platform } from "react-native";
 
-// Màu từ doc/design-tokens.json — palette hiện đại (slate + cyan)
+// Màu từ doc/design-tokens.json — palette hiện đại (slate + blue)
 const light = {
-  primary: "#0891B2",
-  primaryHover: "#0E7490",
-  primaryMuted: "#CFFAFE",
+  primary: "#006FEE",
+  primaryHover: "#005BC4",
+  primaryMuted: "#E6F1FE",
   primaryForeground: "#FFFFFF",
-  secondary: "#64748B",
+  secondary: "#94A3B8",
   secondaryForeground: "#FFFFFF",
-  background: "#FAFAFA",
-  surface: "#FFFFFF",
+  background: "#FFFFFF",
+  surface: "#F8FAFC",
   foreground: "#0F172A",
   muted: "#64748B",
   mutedForeground: "#94A3B8",
   border: "#E2E8F0",
   borderMuted: "#F1F5F9",
   accent: "#F1F5F9",
-  destructive: "#DC2626",
-  success: "#16A34A",
-  warning: "#CA8A04",
+  destructive: "#EF4444",
+  success: "#17C964",
+  warning: "#F5A524",
 };
 
 const dark = {
-  primary: "#22D3EE",
-  primaryHover: "#67E8F9",
-  primaryMuted: "#164E63",
+  primary: "#3385DA",
+  primaryHover: "#006FEE",
+  primaryMuted: "#1A5FB4",
   primaryForeground: "#0F172A",
-  secondary: "#94A3B8",
+  secondary: "#64748B",
   secondaryForeground: "#0F172A",
   background: "#0F172A",
   surface: "#1E293B",
@@ -42,9 +42,9 @@ const dark = {
   border: "#334155",
   borderMuted: "#1E293B",
   accent: "#334155",
-  destructive: "#EF4444",
-  success: "#22C55E",
-  warning: "#FACC15",
+  destructive: "#F31260",
+  success: "#17C964",
+  warning: "#F5A524",
 };
 
 export const Colors = {
@@ -68,27 +68,27 @@ export const Colors = {
   },
 };
 
-// Be Vietnam Pro — font family sau khi load bằng useFonts (@expo-google-fonts/be-vietnam-pro)
 export const FontFamily = {
-  sans: "Be Vietnam Pro",
+  sans: "Inter",
+  serif: "Plus Jakarta Sans",
 };
 
 export const Fonts = Platform.select({
   ios: {
     sans: FontFamily.sans,
-    serif: "ui-serif",
+    serif: FontFamily.serif,
     rounded: "ui-rounded",
     mono: "ui-monospace",
   },
   default: {
     sans: FontFamily.sans,
-    serif: "serif",
+    serif: FontFamily.serif,
     rounded: "normal",
     mono: "monospace",
   },
   web: {
-    sans: `"Be Vietnam Pro", system-ui, -apple-system, sans-serif`,
-    serif: "Georgia, serif",
+    sans: `"Inter", system-ui, -apple-system, sans-serif`,
+    serif: `"Plus Jakarta Sans", Georgia, serif`,
     rounded: "normal",
     mono: "monospace",
   },
