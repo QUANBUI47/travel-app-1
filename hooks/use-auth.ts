@@ -3,7 +3,7 @@ import { useAuthStore } from "@/stores/auth-store";
 // import { supabase } from "@/services/supabase"; // Giả định service đã có
 
 export function useAuth() {
-  const { user, session, isLoading, setUser, setSession, setLoading } = useAuthStore();
+  const { user, session, isLoading, setLoading } = useAuthStore();
 
   useEffect(() => {
     // Logic giả lập check session từ Supabase
@@ -29,7 +29,7 @@ export function useAuth() {
       setLoading(false);
     });
     */
-  }, []);
+  }, [setLoading]);
 
   return { user, session, isLoading };
 }

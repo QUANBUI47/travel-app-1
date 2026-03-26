@@ -1,7 +1,7 @@
 import { View, ScrollView, Pressable, StyleSheet, type ViewProps } from "react-native";
 
 import { useThemeColor } from "@/hooks/use-theme-color";
-import { FontFamily, Radius, Spacing } from "@/constants/theme";
+import { FontFamily, Spacing } from "@/constants/theme";
 import { ThemedText } from "@/components/themed-text";
 
 export type TabItem = { key: string; title: string };
@@ -25,7 +25,6 @@ export function Tabs({
 }: TabsProps) {
   const borderColor = useThemeColor({}, "border");
   const primary = useThemeColor({}, "primary");
-  const fg = useThemeColor({}, "foreground");
   const muted = useThemeColor({}, "muted");
 
   return (

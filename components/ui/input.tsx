@@ -31,13 +31,14 @@ export function Input({
   const borderColor = useThemeColor({}, "border");
   const backgroundColor = useThemeColor({}, "accent");
   const color = useThemeColor({}, "foreground");
-  const placeholder = placeholderTextColor ?? useThemeColor({}, "mutedForeground");
+  const defaultPlaceholderColor = useThemeColor({}, "mutedForeground");
+  const destructiveColor = useThemeColor({}, "destructive");
+
+  const placeholder = placeholderTextColor ?? defaultPlaceholderColor;
 
   return (
     <View style={[styles.wrapper, containerStyle]}>
-      {label ? (
-        <ThemedText style={styles.label}>{label}</ThemedText>
-      ) : null}
+      {label ? <ThemedText style={styles.label}>{label}</ThemedText> : null}
       <View style={[styles.inputWrap, { borderColor, backgroundColor }]}>
         {startContent ? (
           <View style={styles.sideContent}>{startContent}</View>
@@ -59,9 +60,7 @@ export function Input({
         ) : null}
       </View>
       {error ? (
-        <ThemedText
-          style={[styles.error, { color: useThemeColor({}, "destructive") }]}
-        >
+        <ThemedText style={[styles.error, { color: destructiveColor }]}>
           {error}
         </ThemedText>
       ) : null}

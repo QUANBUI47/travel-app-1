@@ -1,7 +1,7 @@
 import { View, Text, Image, StyleSheet, type ImageProps, type ViewProps } from "react-native";
 
 import { useThemeColor } from "@/hooks/use-theme-color";
-import { FontFamily, Radius } from "@/constants/theme";
+import { FontFamily } from "@/constants/theme";
 
 export type AvatarSize = "sm" | "md" | "lg";
 

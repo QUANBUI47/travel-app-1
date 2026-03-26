@@ -4,7 +4,6 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { Spacing } from "@/constants/theme";
 
 const CONTAINER_PADDING = Spacing[6];
-const CONTAINER_PADDING_LG = Spacing[8];
 
 export type ContainerProps = ViewProps & {
   children: React.ReactNode;

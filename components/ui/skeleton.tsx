@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { View, Animated, StyleSheet, type ViewProps } from "react-native";
+import { Animated, StyleSheet, type ViewProps } from "react-native";
 
 import { useThemeColor } from "@/hooks/use-theme-color";
 import { Radius } from "@/constants/theme";

@@ -1,4 +1,3 @@
-import { View, StyleSheet } from "react-native";
 
 import { Input } from "./input";
 
