@@ -68,27 +68,39 @@ export const Colors = {
   },
 };
 
+/**
+ * Manrope — sans-serif duy nhất, hỗ trợ tiếng Việt đầy đủ (subset
+ * vietnamese từ Google Fonts). Đồng bộ với travel-web để brand thống
+ * nhất giữa web + app mobile.
+ *
+ * `display` giữ alias cho code đang dùng FontFamily.serif (sẽ migration
+ * dần). Cả 2 trỏ về Manrope, chỉ khác weight ở component (700/800).
+ */
 export const FontFamily = {
-  sans: "Inter",
-  serif: "Plus Jakarta Sans",
+  sans: "Manrope",
+  display: "Manrope",
+  /** @deprecated alias backward-compat — Manrope là sans-serif, key cũ tên
+   * "serif" giữ để 14 file không cần sửa cùng commit. Migrate dần sang
+   * `FontFamily.sans` hoặc `FontFamily.display`. */
+  serif: "Manrope",
 };
 
 export const Fonts = Platform.select({
   ios: {
     sans: FontFamily.sans,
-    serif: FontFamily.serif,
+    display: FontFamily.display,
     rounded: "ui-rounded",
     mono: "ui-monospace",
   },
   default: {
     sans: FontFamily.sans,
-    serif: FontFamily.serif,
+    display: FontFamily.display,
     rounded: "normal",
     mono: "monospace",
   },
   web: {
-    sans: `"Inter", system-ui, -apple-system, sans-serif`,
-    serif: `"Plus Jakarta Sans", Georgia, serif`,
+    sans: `"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
+    display: `"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
     rounded: "normal",
     mono: "monospace",
   },

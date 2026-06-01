@@ -3,19 +3,15 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from "@react-navigation/native
 import { Stack, useRouter, useSegments } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
-import { 
-  useFonts, 
-  Inter_400Regular, 
-  Inter_500Medium, 
-  Inter_600SemiBold, 
-  Inter_700Bold 
-} from "@expo-google-fonts/inter";
-import { 
-  PlusJakartaSans_400Regular, 
-  PlusJakartaSans_500Medium, 
-  PlusJakartaSans_600SemiBold, 
-  PlusJakartaSans_700Bold 
-} from "@expo-google-fonts/plus-jakarta-sans";
+import {
+  useFonts,
+  Manrope_300Light,
+  Manrope_400Regular,
+  Manrope_500Medium,
+  Manrope_600SemiBold,
+  Manrope_700Bold,
+  Manrope_800ExtraBold,
+} from "@expo-google-fonts/manrope";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/use-color-scheme";
@@ -34,15 +30,15 @@ export default function RootLayout() {
   
   const { user, isLoading, setLoading } = useAuthStore();
 
+  // Manrope unified — đồng bộ với travel-web (subset Vietnamese đầy đủ).
+  // Key "Manrope" base + weight suffix theo convention RN fontFamily.
   const [fontsLoaded] = useFonts({
-    Inter: Inter_400Regular,
-    "Inter-Medium": Inter_500Medium,
-    "Inter-SemiBold": Inter_600SemiBold,
-    "Inter-Bold": Inter_700Bold,
-    "Plus Jakarta Sans": PlusJakartaSans_400Regular,
-    "Plus Jakarta Sans-Medium": PlusJakartaSans_500Medium,
-    "Plus Jakarta Sans-SemiBold": PlusJakartaSans_600SemiBold,
-    "Plus Jakarta Sans-Bold": PlusJakartaSans_700Bold,
+    "Manrope-Light": Manrope_300Light,
+    Manrope: Manrope_400Regular,
+    "Manrope-Medium": Manrope_500Medium,
+    "Manrope-SemiBold": Manrope_600SemiBold,
+    "Manrope-Bold": Manrope_700Bold,
+    "Manrope-ExtraBold": Manrope_800ExtraBold,
   });
 
   // Simulate auth check on mount
