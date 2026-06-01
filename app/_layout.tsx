@@ -5,13 +5,14 @@ import { StatusBar } from "expo-status-bar";
 import * as SplashScreen from "expo-splash-screen";
 import {
   useFonts,
-  Manrope_300Light,
-  Manrope_400Regular,
-  Manrope_500Medium,
-  Manrope_600SemiBold,
-  Manrope_700Bold,
-  Manrope_800ExtraBold,
-} from "@expo-google-fonts/manrope";
+  BeVietnamPro_300Light,
+  BeVietnamPro_400Regular,
+  BeVietnamPro_500Medium,
+  BeVietnamPro_600SemiBold,
+  BeVietnamPro_700Bold,
+  BeVietnamPro_800ExtraBold,
+  BeVietnamPro_900Black,
+} from "@expo-google-fonts/be-vietnam-pro";
 import "react-native-reanimated";
 
 import { useColorScheme } from "@/hooks/use-color-scheme";
@@ -30,15 +31,16 @@ export default function RootLayout() {
   
   const { user, isLoading, setLoading } = useAuthStore();
 
-  // Manrope unified — đồng bộ với travel-web (subset Vietnamese đầy đủ).
-  // Key "Manrope" base + weight suffix theo convention RN fontFamily.
+  // Be Vietnam Pro unified — đồng bộ với travel-web. Designer Việt, optimize
+  // 100% cho dấu tiếng Việt. Key "BeVietnamPro" base + weight suffix.
   const [fontsLoaded] = useFonts({
-    "Manrope-Light": Manrope_300Light,
-    Manrope: Manrope_400Regular,
-    "Manrope-Medium": Manrope_500Medium,
-    "Manrope-SemiBold": Manrope_600SemiBold,
-    "Manrope-Bold": Manrope_700Bold,
-    "Manrope-ExtraBold": Manrope_800ExtraBold,
+    "BeVietnamPro-Light": BeVietnamPro_300Light,
+    BeVietnamPro: BeVietnamPro_400Regular,
+    "BeVietnamPro-Medium": BeVietnamPro_500Medium,
+    "BeVietnamPro-SemiBold": BeVietnamPro_600SemiBold,
+    "BeVietnamPro-Bold": BeVietnamPro_700Bold,
+    "BeVietnamPro-ExtraBold": BeVietnamPro_800ExtraBold,
+    "BeVietnamPro-Black": BeVietnamPro_900Black,
   });
 
   // Simulate auth check on mount

@@ -1,7 +1,7 @@
 /**
  * Design system — Vivu (doc/DESIGN_SYSTEM.md, doc/design-tokens.json)
  * Palette hiện đại: blue (primary), slate neutrals.
- * Font: Inter & Plus Jakarta Sans. Icons: Lucide.
+ * Font: Be Vietnam Pro (web + app đồng bộ). Icons: Lucide.
  */
 
 import { Platform } from "react-native";
@@ -69,20 +69,21 @@ export const Colors = {
 };
 
 /**
- * Manrope — sans-serif duy nhất, hỗ trợ tiếng Việt đầy đủ (subset
- * vietnamese từ Google Fonts). Đồng bộ với travel-web để brand thống
- * nhất giữa web + app mobile.
+ * Be Vietnam Pro — sans-serif do designer Việt (Lam Bao) thiết kế,
+ * optimize 100% cho diacritics tiếng Việt. Đồng bộ với travel-web để
+ * brand thống nhất giữa web + app mobile.
  *
- * `display` giữ alias cho code đang dùng FontFamily.serif (sẽ migration
- * dần). Cả 2 trỏ về Manrope, chỉ khác weight ở component (700/800).
+ * `display` & `serif` giữ alias cho code đang dùng FontFamily.serif (sẽ
+ * migration dần). Cả 3 trỏ về Be Vietnam Pro, chỉ khác weight ở
+ * component (700/800/900).
  */
 export const FontFamily = {
-  sans: "Manrope",
-  display: "Manrope",
-  /** @deprecated alias backward-compat — Manrope là sans-serif, key cũ tên
-   * "serif" giữ để 14 file không cần sửa cùng commit. Migrate dần sang
-   * `FontFamily.sans` hoặc `FontFamily.display`. */
-  serif: "Manrope",
+  sans: "BeVietnamPro",
+  display: "BeVietnamPro",
+  /** @deprecated alias backward-compat — Be Vietnam Pro là sans-serif,
+   * key cũ tên "serif" giữ để 14 file không cần sửa cùng commit. Migrate
+   * dần sang `FontFamily.sans` hoặc `FontFamily.display`. */
+  serif: "BeVietnamPro",
 };
 
 export const Fonts = Platform.select({
@@ -99,8 +100,8 @@ export const Fonts = Platform.select({
     mono: "monospace",
   },
   web: {
-    sans: `"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
-    display: `"Manrope", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
+    sans: `"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
+    display: `"Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif`,
     rounded: "normal",
     mono: "monospace",
   },
